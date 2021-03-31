@@ -1,0 +1,36 @@
+{%extends 'base/base.html'%}
+{% block content %}
+  <table class= "table table-bordered">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>numero</td>
+        <td>estado</td>
+        <td>descripcion</td>
+        <td>tipo</td>
+        <td>costo</td>
+        <td>acciones</td>
+      </tr>
+    </thead>
+    <tbody>
+      {%if habitaciones %}
+      {% for habitacion in habitaciones %}
+        <tr>
+          <td>{{habitacion.id}}</td>
+          <td>{{habitacion.numero}}</td>
+          <td>{{habitacion.estado}}</td>
+          <td>{{habitacion.descripcion}}</td>
+          <td>{{habitacion.fkTipo}}</td>
+          <td>{{habitacion.costo}}</td>
+          <td>
+            <a class="btn btn-primary" href="{% url 'habitacion_editar' habitacion.id%}">Editar</a>
+            <a class="btn btn-danger"  href="{% url 'habitacion_eliminar' habitacion.id%}">eliminar</a>
+          </td>
+        </tr>
+      {%endfor%}
+      {%else%}
+      <h1>No hay registro de habitaciones</h1>
+      {%endif%}
+    </tbody>
+  </table>
+{%endblock%}
