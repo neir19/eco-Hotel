@@ -13,8 +13,8 @@
       </tr>
     </thead>
     <tbody>
-      {%if habitaciones %}
-      {% for habitacion in habitaciones %}
+      {%if object_list %}
+      {% for habitacion in object_list %}
         <tr>
           <td>{{habitacion.id}}</td>
           <td>{{habitacion.numero}}</td>

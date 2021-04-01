@@ -1,10 +1,10 @@
 from django.conf.urls import url
-from apps.habitacion.views import index, habitacion_list, habitacion_new, habitacion_edit, habitacion_delete
+from apps.habitacion.views import index, HabitacionList,HabitacionDelete, HabitacionUpdate,HabitacionNew
 
 urlpatterns =[
   url(r'^$',index),
-  url(r'^listar/',habitacion_list,name="habitacion_listar"),
-  url(r'^nuevo/',habitacion_new,name="habitacion_new"),
-  url(r'^editar/(?P<id_habitacion>\d+)/',habitacion_edit, name="habitacion_editar"),
-  url(r'^delete/(?P<id_habitacion>\d+)/',habitacion_delete, name="habitacion_eliminar"),
+  url(r'^listar/',HabitacionList.as_view(),name="habitacion_listar"),
+  url(r'^nuevo/',HabitacionNew.as_view(),name="habitacion_new"),
+  url(r'^editar/(?P<pk>\d+)/',HabitacionUpdate.as_view(), name="habitacion_editar"),
+  url(r'^delete/(?P<pk>\d+)/',HabitacionDelete.as_view(), name="habitacion_eliminar"),
 ]
