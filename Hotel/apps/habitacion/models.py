@@ -6,6 +6,9 @@ class TipoHabitacion(models.Model):
   nombre= models.CharField(max_length=20)
   descripcion=models.TextField()
 
+  def __str__(self):
+    return '{}'.format(self.nombre)
+
 
 
 class Habitacion(models.Model):
