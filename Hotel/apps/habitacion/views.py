@@ -1,28 +1,14 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from apps.habitacion.models import Habitacion
-from apps.habitacion.form import HabitacionForm
+from apps.habitacion.models import Habitacion, TipoHabitacion
+from apps.habitacion.form import HabitacionForm, ThabitacionForm
 from django.views.generic import ListView,CreateView,UpdateView,DeleteView
 from django.urls import reverse_lazy
 
 
 # Create your views here.
-
-
-
-
-
-
-
 def index(request):
   return HttpResponse("index")
-
-# def habitacion_list(request):
-#   habitacion=Habitacion.objects.all().order_by('numero')
-#   contexto={'habitaciones':habitacion}
-#   return render(request,'habitacion/habitacion_list.html',contexto)
-
-
 
 def habitacion_delete(request, id_habitacion):
   habitacion =Habitacion.objects.get(id=id_habitacion)
@@ -51,3 +37,23 @@ class HabitacionDelete(DeleteView):
   template_name='habitacion/habitacion_delete.html'
   success_url= reverse_lazy('habitacion_listar')
 
+class ThabitacionNew(CreateView):
+  model=TipoHabitacion
+  form_class= ThabitacionForm
+  template_name='habitacion/habitacion_form.html'
+  success_url= reverse_lazy('habitacion_listar')
+  
+class ThabitacionList(ListView):
+  model= TipoHabitacion
+  template='Habitacion/tipoHabitacion_list.html' 
+
+class ThabitacionUpdate(UpdateView):
+  model= TipoHabitacion
+  form_class=ThabitacionForm
+  template_name='habitacion/habitacion_form.html'
+  success_url= reverse_lazy('thabitacion_Listar')
+
+class ThabitacionDelete(DeleteView):
+  model=TipoHabitacion
+  template_name='habitacion/thabitacion_delete.html'
+  success_url= reverse_lazy('thabitacion_Listar')
