@@ -8,7 +8,7 @@ urlpatterns =[
   url(r'^editar/(?P<pk>\d+)/',HabitacionUpdate.as_view(), name="habitacion_editar"),
   url(r'^delete/(?P<pk>\d+)/',HabitacionDelete.as_view(), name="habitacion_eliminar"),
   url(r'^tnuevo/',ThabitacionNew.as_view(),name="thabitacion_new"),
-  url(r'^tlistar/',ThabitacionList.as_view(),name="thabitacion_Listar"),
+  url(r'^tlistar/',ThabitacionList.as_view(),name="thabitacion_listar"),
   url(r'^teditar/(?P<pk>\d+)/',ThabitacionUpdate.as_view(), name="thabitacion_editar"),
   url(r'^tdelete/(?P<pk>\d+)/',ThabitacionDelete.as_view(), name="thabitacion_eliminar"),
   
