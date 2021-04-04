@@ -3,9 +3,9 @@
 
 <form method='post'>
   {%csrf_token%}
-  <h3>¿Desea elminar el registro de {{habitacion.numero}} ?</h3>
+  <h3>¿Desea elminar el registro de {{thabitacion.nombre}} ?</h3>
   <button class="btn btn-alert" type='submit'>si, eliminar</button>
-  <a class="btn btn-default" href="{%url 'habitacion_listar'%}">cancelar</a>
+  <a class="btn btn-default" href="{%url 'thabitacion_listar'%}">cancelar</a>
 
 </form>
 

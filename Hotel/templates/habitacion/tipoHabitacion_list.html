@@ -1,0 +1,34 @@
+{%extends 'base/baseHabitacion.html'%}
+{% block content %}
+<a class='btn btn-primary' href="/habitacion/tnuevo/" >Agregar</a>
+  <table class= "table table-bordered">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>tipo</td>
+        <td>Description</td>
+        <td>Acciones</td>
+      </tr>
+    </thead>
+    <tbody>
+      {%if object_list %}
+      {% for thabitacion in object_list %}
+        <tr>
+          <td>{{thabitacion.id}}</td>
+          <td>{{thabitacion.nombre}}</td>
+          <td>{{thabitacion.descripcion}}</td>
+
+          <td>
+            <a class="btn btn-primary" href="{% url 'thabitacion_editar' thabitacion.id%}">Editar</a>
+            <a class="btn btn-danger"  href="{% url 'thabitacion_eliminar' thabitacion.id%}">eliminar</a>
+          </td>
+          
+
+        </tr>
+      {%endfor%}
+      {%else%}
+      <h1>No hay registro de habitaciones</h1>
+      {%endif%}
+    </tbody>
+  </table>
+{%endblock%}
