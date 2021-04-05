@@ -1,5 +1,22 @@
 from django import forms
-from apps.habitacion.models import Habitacion
+from apps.habitacion.models import Habitacion,TipoHabitacion
+
+class ThabitacionForm(forms.ModelForm):
+  class Meta:
+    model = TipoHabitacion
+
+    fields =[
+      'nombre',
+      'descripcion',
+    ]
+    labels={
+      'nombre': 'tipo de habitacion',
+      'descripcion': 'descripcion'
+    }
+    widget={
+      'nombre':           forms.TextInput(attrs={'class': 'form-control'}),
+      'description':      forms.TextInput(attrs={'class': 'form-control'}),
+    }
 
 class HabitacionForm(forms.ModelForm):
   class Meta:
@@ -26,3 +43,5 @@ class HabitacionForm(forms.ModelForm):
       'descripcion': forms.TextInput(attrs={'class': 'form-control'}),
       'fkTipo':      forms.TextInput(attrs={'class': 'form-control'}),
     }
+
+

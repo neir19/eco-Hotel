@@ -1,5 +1,6 @@
-{%extends 'base/base.html'%}
+{%extends 'base/baseHabitacion.html'%}
 {% block content %}
+<a class='btn btn-primary' href="/habitacion/nuevo/" >Agregar</a>
   <table class= "table table-bordered">
     <thead>
       <tr>
@@ -13,8 +14,8 @@
       </tr>
     </thead>
     <tbody>
-      {%if habitaciones %}
-      {% for habitacion in habitaciones %}
+      {%if object_list %}
+      {% for habitacion in object_list %}
         <tr>
           <td>{{habitacion.id}}</td>
           <td>{{habitacion.numero}}</td>
