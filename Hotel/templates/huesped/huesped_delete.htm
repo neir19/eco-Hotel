@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <h5>¿Esta seguro de eliminar a {{object.nombre}} {{object.apellido}} de la base de datos?</h5>
+    <button class="btn btn-dark" type="submit">Si, eliminar</button>
+    <a class="btn btn-dark" href="{% url 'huesped_listar' %}">Cancelar</a>
+  </form>
+{% endblock %} 
