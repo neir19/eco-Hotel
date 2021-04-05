@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Cliente
+from Hotel.apps.huesped.models import Cliente
 from django.views.generic import ListView,CreateView,UpdateView,DeleteView
 from .form import GestionForm
 from django.urls import reverse_lazy
