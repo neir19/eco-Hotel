@@ -1,10 +1,11 @@
 {% extends 'base_huesped/base_huesped.htm' %}
 
 {% block content %}
-<form method="post">
+<form method='post'>
   {% csrf_token %}
-  {{ form.as_p}}
-  <button class= "btn btn-success" href="{% url 'huesped_listar' %}">Guardar</button>
+  {{form.as_p}}
+  <button class= "btn btn-success" href="{% url 'nacionalidad_listar' %}">Guardar</button>
   <a class="btn btn-primary" href="{% url 'huesped_listar' %}">Cancelar</a>
+
 </form>
 {% endblock %}

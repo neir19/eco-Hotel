@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from apps.huesped.models import Cliente
+from django.http import HttpResponseRedirect
+from apps.huesped.models import Cliente,Nacionalidad
 from django.views.generic import ListView,CreateView,UpdateView,DeleteView
-from .form import GestionForm
+from apps.huesped.forms import NacionalidadForm, GestionForm 
 from django.urls import reverse_lazy
 
 class HuespedList(ListView):
@@ -25,3 +26,16 @@ class HuespedDelete(DeleteView):
   form_class=GestionForm
   template_name='huesped/huesped_delete.htm'
   success_url= reverse_lazy('huesped_listar')
+  
+class NacionalidadList(ListView):
+  model = Nacionalidad
+  template_name ='nacionalidad/nacionalidad_list.htm' 
+
+
+class NacionalidadCreate(CreateView):
+  model=Nacionalidad
+  form_class= NacionalidadForm
+  template_name='nacionalidad/nacionalidad_form.htm'
+  success_url= reverse_lazy('huesped_listar')
+
+  
