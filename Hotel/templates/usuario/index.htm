@@ -1,0 +1,68 @@
+{% extends 'base_huesped/base_huesped.htm' %}
+
+{% block title %}
+  ECO HOTEL
+{% endblock %}
+
+{% block navbar %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Bienvenido a ECO HOTEL</a>
+  
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="/usuario/nuevo">Registrar</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="/huesped/nacionalidad/tlistar">Nacionalidades Regitradas</a>
+      </li> -->
+
+      
+      
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<form method='post'>
+  {% csrf_token %}
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <label for="username">Nombre de usuario</label>
+        <input class="form-control" type="text" name="username">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <label for="username">Contraseña</label>
+        <input class="form-control" type="password" name="password">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <button class= "btn btn-success" href="{% url 'huesped_listar' %}">Ingresar</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-group">
+        <label for="username">Olvide mi contraseña</label>
+        <input class="form-control" type="submit" name="ingresar">
+      </div>
+    </div>
+  </div>
+  
+</form>
+
+{% endblock %}
