@@ -17,7 +17,7 @@
         <a class="nav-link" href="#">/ Registro</a>
       </li>
       <!-- <li class="nav-item">
-        <a class="nav-link" href="/huesped/nacionalidad/tlistar">Nacionalidades Regitradas</a>
+        <a class="nav-link" href="/huesped/nacionalidad/listar">Nacionalidades Regitradas</a>
       </li> -->
 
       
@@ -39,7 +39,7 @@
   <div class="col-md-8 col-md-offset-2">
     <div class="form-group">
       <label>Nombre</label>
-      <input class="from-control" type="text" name="firs_name">
+      <input class="from-control" type="text" name="first_name">
     </div>
   </div>
   <div class="col-md-8 col-md-offset-2">
@@ -69,6 +69,7 @@
   <div class="col-md-8 col-md-offset-2">
     <div class="form-group">
       <button type="submit" class="btn btn-success">Guardar</button>
+      <button class= "btn btn-success" href="{% url 'huesped_listar' %}">Ingresar</button>
       <!-- <a type="submit" class="btn btn-primary">Cancelar</a> -->
     </div>
   </div>

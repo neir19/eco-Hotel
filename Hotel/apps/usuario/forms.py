@@ -17,10 +17,3 @@ class RegistroForm(UserCreationForm):
       'last_name': 'Apellido',
       'email': 'Email',
     }
-
-    # widgets = {
-    #   'username': 'Nombre de usurio',
-    #   'first_name': 'Primer nombre',
-    #   'last_name': 'Apellido',
-    #   'email': 'email',
-    # }
