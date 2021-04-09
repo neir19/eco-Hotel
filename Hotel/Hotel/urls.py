@@ -34,4 +34,6 @@ urlpatterns = [
     name='password_reset_confirm'),
     url(r'^reset/password_resetcomplete/$', PasswordResetCompleteView.as_view(template_name='registration\password_reset_complete.htm'),
     name='password_reset_complete'),
-]
+    url(r'^GestionAl/',include('apps.GestionAl.urls')),
+    url(r'^huesped/',include('apps.huesped.urls')),
+
