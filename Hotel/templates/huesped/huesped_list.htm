@@ -1,8 +1,6 @@
 {% extends 'base_huesped/base_huesped.htm' %}
 
 {% block content %}
-<a class="btn btn-Warning" href="{% url 'huesped_agregar' %}"><h5>Registrar Nuevo Huesped</h5>
-</a>
 <table class="table table-border">
   <thead>
     <tr>
@@ -42,4 +40,8 @@
     {% endif %}
   </tbbody>
 </table>
+
+<a class="btn btn-Warning" href="{% url 'huesped_agregar' %}"><h5>Registrar Nuevo Huesped</h5>
+</a>
+
 {% endblock %}

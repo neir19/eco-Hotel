@@ -1,6 +1,8 @@
 {% load static %}
+
 <html lang="en">
   <head>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css'%}">
     <title>{%block title %}ECO-HOTEL {%endblock %}</title>
   </head>
@@ -10,23 +12,20 @@
 
     {%block navbar%}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Gestión Huespedes</a>
+      <a class="navbar-brand" href="#">Gestión Huesped</a>
       
     
       <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
           
           <li class="nav-item dropdown">
-            <a class="nav-link" href="nacionalidad/nueva">Introducir Nacionalidad</a>
+            <a class="nav-link" href="nacionalidad/nueva">Ingresar Nacionalidad</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="nacionalidad/listar">Nacionalidades</a>
-          </li> -->
-
-        </ul>
+          </ul>
       </div>
     </nav>
     {%endblock navbar%}
+
     {%block content%}
     {%endblock%}
 

@@ -1,15 +1,13 @@
 {% extends 'base_huesped/base_huesped.htm' %}
 
-{% block content %}
 
+{% block content %}
 
 <table class="table table-border">
   <thead>
     <tr>
       <td>#</td>
-      <td> Nombre </td>
-      <td> Apellido </td>
-      <td> Telefono </td>
+      <td> Pais </td>
       <td> Nacionalidad </td>
       <td> Acciones </td>
 
@@ -18,19 +16,12 @@
   <tbbody>
     {% if object_list %}
 
-    {% for naccionalidad in object_list %}
+    {% for nacionalidad in object_list %}
     <tr>
 
       <td> {{nacionalidad.id_Nacionalidad}} </td>
-      <td> {{nacionalidad.nombre}} </td>
-      <td> {{nacionalidad.apellido}} </td>
-      <td> {{nacionalidad.telefono}} </td>
+      <td> {{nacionalidad.pais}} </td>
       <td> {{nacionalidad.nacionalidad}} </td>
-      
-      <!-- <td>
-        <a class="btn btn-success" href="{% url 'nacionalidad_listar' nacionalidad.id_Nacionalidad %}">Editar</a>
-        <a class="btn btn-danger" href="{% url 'nacionalidad_nueva' nacionalidad.id_Nacionalidad %}">ELiminar</a> 
-      </td> -->
     
     </tr>
     {% endfor %}
@@ -39,4 +30,8 @@
     {% endif %}
   </tbbody>
 </table>
+
+<a class="btn btn-Warning" href="{% url 'nacionalidad_agregar' %}"><h5>Regresar</h5>
+</a>
+
 {% endblock %}
