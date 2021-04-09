@@ -1,0 +1,38 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css'%}">
+    <title>{%block title %}ECO-HOTEL {%endblock %}</title>
+  </head>
+  <body>
+    <script src="{% static 'js/bootstrap.min.js'%}" ></script>
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+
+    {%block navbar%}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      
+    
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="/habitacion/listar">listar Habitaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/habitacion/tlistar">listar  tipo Habitaciones</a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+    {%endblock navbar%}
+    {%block content%}
+    {%endblock%}
+
+
+  </body>
+
+</html>
