@@ -1,0 +1,77 @@
+{% extends 'base_huesped/base_huesped.htm' %}
+
+{% block title %}
+  ECO HOTEL
+{% endblock %}
+
+{% block navbar %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">ECO HOTEL</a>
+  
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#">/ Registro</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="/huesped/nacionalidad/listar">Nacionalidades Regitradas</a>
+      </li> -->
+
+      
+      
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<form method='post'>
+  {% csrf_token %}
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <label>Nombre de usuario</label>
+      <input class="from-control" type="text" name="username">
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input class="from-control" type="text" name="first_name">
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <label>Apellido</label>
+      <input class="from-control" type="text" name="last_name">
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <label>Email</label>
+      <input class="from-control" type="text" name="email">
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input class="from-control" type="password" name="password1">
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <label>Confirmar contraseña</label>
+      <input class="from-control" type="password" name="password2">
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="form-group">
+      <button type="submit" class="btn btn-success">Guardar</button>
+      <!-- <a type="submit" class="btn btn-primary">Cancelar</a> -->
+    </div>
+  </div>
+  
+</form>
+{% endblock %}

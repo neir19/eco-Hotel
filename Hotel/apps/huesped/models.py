@@ -7,7 +7,7 @@ class Nacionalidad(models.Model):
     nacionalidad=models.CharField(max_length=50)
 
     def __str__(self):
-       return self.nacionalidad
+        return '{}'.format(self.nacionalidad)
 
 class Cliente(models.Model):
   id_Cliente=models.IntegerField(primary_key=True)
@@ -19,4 +19,4 @@ class Cliente(models.Model):
   nacionalidad=models.ForeignKey(Nacionalidad,null=True, blank=True, on_delete=models.CASCADE)
 
   def __str__(self):
-       return self.nombre
+        return '{}'.format(self.nombre)

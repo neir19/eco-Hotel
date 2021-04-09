@@ -1,0 +1,37 @@
+{% extends 'base_huesped/base_huesped.htm' %}
+
+
+{% block content %}
+
+<table class="table table-border">
+  <thead>
+    <tr>
+      <td>#</td>
+      <td> Pais </td>
+      <td> Nacionalidad </td>
+      <td> Acciones </td>
+
+    </tr>
+  </thead>
+  <tbbody>
+    {% if object_list %}
+
+    {% for nacionalidad in object_list %}
+    <tr>
+
+      <td> {{nacionalidad.id_Nacionalidad}} </td>
+      <td> {{nacionalidad.pais}} </td>
+      <td> {{nacionalidad.nacionalidad}} </td>
+    
+    </tr>
+    {% endfor %}
+    {% else %}
+    <h1>No se ha encontrado información</h1>
+    {% endif %}
+  </tbbody>
+</table>
+
+<a class="btn btn-Warning" href="{% url 'nacionalidad_agregar' %}"><h5>Regresar</h5>
+</a>
+
+{% endblock %}

@@ -1,37 +1,33 @@
-{% extends 'base/base.html' %}
+{% extends 'base_huesped/base_huesped.htm' %}
 
 {% block content %}
-<a class="btn btn-Warning" href="{% url 'huesped_agregar' %}"><h5>Registrar Nuevo Huesped</h5>
-</a>
 <table class="table table-border">
   <thead>
     <tr>
       <td>#</td>
-      <td>Nombre</td>
-      <td>Apellido</td>
-      <td>Dirección</td>
-      <td>Documento</td>
-      <td>Telefono</td>
-      <td>Nacionalidad</td>
-      <td>Acciones</td>
+      <td> Nombre </td>
+      <td> Apellido </td>
+      <td> Dirección </td>
+      <td> Documento </td>
+      <td> Telefono </td>
+      <td> Nacionalidad </td>
+      <td> Acciones </td>
 
     </tr>
   </thead>
   <tbbody>
     {% if object_list %}
 
-    
-
     {% for gestion in object_list %}
     <tr>
 
-      <td>{{gestion.id_Cliente}}</td>
-      <td>{{gestion.nombre}}</td>
-      <td>{{gestion.apellido}}</td>
-      <td>{{gestion.direccion}}</td>
-      <td>{{gestion.documento}}</td>
-      <td>{{gestion.telefono}}</td>
-      <td>{{gestion.nacionalidad}}</td>
+      <td> {{gestion.id_Cliente}} </td>
+      <td> {{gestion.nombre}} </td>
+      <td> {{gestion.apellido}} </td>
+      <td> {{gestion.direccion}} </td>
+      <td> {{gestion.documento}} </td>
+      <td> {{gestion.telefono}} </td>
+      <td> {{gestion.nacionalidad}} </td>
       <td>
         <a class="btn btn-success" href="{% url 'huesped_edit' gestion.id_Cliente %}">Editar</a>
         <a class="btn btn-danger" href="{% url 'huesped_delete' gestion.id_Cliente %}">ELiminar</a> 
@@ -44,4 +40,8 @@
     {% endif %}
   </tbbody>
 </table>
+
+<a class="btn btn-Warning" href="{% url 'huesped_agregar' %}"><h5>Registrar Nuevo Huesped</h5>
+</a>
+
 {% endblock %}
