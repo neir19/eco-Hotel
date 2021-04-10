@@ -22,7 +22,7 @@
       <td> {{nacionalidad.id_Nacionalidad}} </td>
       <td> {{nacionalidad.pais}} </td>
       <td> {{nacionalidad.nacionalidad}} </td>
-      <td><button class="btn btn-warning" type="submit" href="{% url 'nacionalidad_delete' nacionalidad.id_Nacionalidad %}">Eliminar</button>
+      <td><a class="btn btn-warning" href="{% url 'nacionalidad_delete' nacionalidad.id_Nacionalidad %}">Eliminar</a>
         <a class="btn btn-info" href="{% url 'nacionalidad_edit' nacionalidad.id_Nacionalidad %}">Editar</a></td>
     
     </tr>

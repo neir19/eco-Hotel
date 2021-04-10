@@ -41,7 +41,7 @@ class NacionalidadCreate(CreateView):
 class NacionalidadUpdate(UpdateView):
   model=Nacionalidad
   form_class=NacionalidadForm
-  template_name='nacionaidad/nacionalidad_list.htm'
+  template_name='nacionalidad/nacionalidad_list.htm'
   success_url= reverse_lazy('huesped_listar')
 
 class NacionalidadDelete(DeleteView):
