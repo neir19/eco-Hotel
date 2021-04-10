@@ -1,0 +1,39 @@
+{%extends 'base/basehabitacion.html'%}
+{% block content %}
+<a href="{% url 'Registrador_crear' %}" class="btn btn-primary">Agregar</a>
+  
+      {% if object_list %}
+      <table class= "table table-bordered">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Nombre</td>
+            <td>Direccion</td>
+            <td>Documento</td>
+            <td>Telefono</td>
+            <td>Estado</td>
+            <td>Observacion</td>
+          </tr>
+        </thead>
+        <tbody>
+      {% for Registrador in object_list %}
+        <tr>
+          <td>{{Registrador.id}}</td>
+          <td>{{Registrador.nombre}}</td>
+          <td>{{Registrador.direccion}}</td>
+          <td>{{Registrador.documento}}</td>
+          <td>{{Registrador.telefono}}</td>
+          <td>{{Registrador.estado}}</td>
+          <td>{{Registrador.observacion}}</td>
+          <td>
+            <a class="btn btn-primary" href="{% url 'Registrador_editar' Registrador.id%}">Editar</a>
+            <a class="btn btn-danger"  href="{% url 'Registrador_eliminar' Registrador.id%}">eliminar</a>
+          </td>
+        </tr>
+      {%endfor%}
+      {%else%}
+      <h1>No hay registradores</h1>
+      {%endif%}
+    </tbody>
+  </table>
+{%endblock%}
