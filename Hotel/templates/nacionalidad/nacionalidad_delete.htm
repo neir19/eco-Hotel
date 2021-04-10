@@ -1,1 +1,10 @@
 {% extends 'base_huesped/base_huesped.htm' %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <h5>¿Esta seguro de eliminar el país {{object.pais}} con nacionalidad {{object.nacionalidad}} de la base de datos?</h5>
+    <button class="btn btn-dark" type="submit" >Si, eliminar</button>
+    <a class="btn btn-dark" href="{% url 'huesped_listar' %}">Cancelar</a>
+  </form>
+{% endblock %}

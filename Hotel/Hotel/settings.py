@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.GestionAl',
     'apps.huesped',
     'apps.usuario',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
