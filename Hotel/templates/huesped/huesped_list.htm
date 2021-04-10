@@ -1,6 +1,8 @@
-{% extends 'base_huesped/base_huesped.htm' %}
+{%extends 'base/baseHabitacion.html'%}
 
 {% block content %}
+<a class="btn btn-primary" href="{% url 'huesped_agregar' %}"><h5>Agregar</h5>
+</a>
 <table class="table table-border">
   <thead>
     <tr>
@@ -41,7 +43,6 @@
   </tbbody>
 </table>
 
-<a class="btn btn-Warning" href="{% url 'huesped_agregar' %}"><h5>Registrar Nuevo Huesped</h5>
-</a>
+
 
 {% endblock %}
