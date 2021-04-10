@@ -4,8 +4,8 @@
 <form method='post'>
   {%csrf_token%}
   <h3>¿Desea elminar el registro de {{habitacion.numero}} ?</h3>
-  <button class="btn btn-alert" type='submit'>si, eliminar</button>
-  <a class="btn btn-default" href="{%url 'Alquiler_listar'%}">cancelar</a>
+  <button class="btn btn-dark" type='submit'>si, eliminar</button>
+  <a class="btn btn-dark" href="{%url 'Alquiler_listar'%}">cancelar</a>
 
 </form>
 

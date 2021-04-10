@@ -1,20 +1,21 @@
 {%extends 'base/baseHabitacion.html'%}
 {% block content %}
 <a class='btn btn-primary' href="/habitacion/nuevo/" >Agregar</a>
-  <table class= "table table-bordered">
-    <thead>
-      <tr>
-        <td>#</td>
-        <td>numero</td>
-        <td>estado</td>
-        <td>descripcion</td>
-        <td>tipo</td>
-        <td>costo</td>
-        <td>acciones</td>
-      </tr>
-    </thead>
-    <tbody>
+  
       {%if object_list %}
+      <table class= "table table-bordered">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>numero</td>
+            <td>estado</td>
+            <td>descripcion</td>
+            <td>tipo</td>
+            <td>costo</td>
+            <td>acciones</td>
+          </tr>
+        </thead>
+        <tbody>
       {% for habitacion in object_list %}
         <tr>
           <td>{{habitacion.id}}</td>
