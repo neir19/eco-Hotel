@@ -1,20 +1,21 @@
 {%extends 'base/basehabitacion.html'%}
 {% block content %}
 <a href="{% url 'Alquiler_crear' %}" class="btn btn-primary">Agregar</a>
-  <table class= "table table-bordered">
-    <thead>
-      <tr>
-        <td>#</td>
-        <td>Fecha de Entrada</td>
-        <td>Fecha de Salida</td>
-        <td>costoTotal</td>
-        <td>observacion</td>
-        <td>registrador</td>
-        <td>estado</td>
-      </tr>
-    </thead>
-    <tbody>
+  
       {% if object_list %}
+      <table class= "table table-bordered">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Fecha de Entrada</td>
+            <td>Fecha de Salida</td>
+            <td>costoTotal</td>
+            <td>observacion</td>
+            <td>registrador</td>
+            <td>estado</td>
+          </tr>
+        </thead>
+        <tbody>
       {% for Alquiler in object_list %}
         <tr>
           <td>{{Alquiler.id}}</td>

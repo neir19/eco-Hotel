@@ -1,24 +1,24 @@
 {%extends 'base/baseHabitacion.html'%}
 
 {% block content %}
-<a class="btn btn-primary" href="{% url 'huesped_agregar' %}"><h5>Agregar</h5>
-</a>
-<table class="table table-border">
-  <thead>
-    <tr>
-      <td>#</td>
-      <td> Nombre </td>
-      <td> Apellido </td>
-      <td> Dirección </td>
-      <td> Documento </td>
-      <td> Telefono </td>
-      <td> Nacionalidad </td>
-      <td> Acciones </td>
+<a class="btn btn-primary" href="{% url 'huesped_agregar' %}">Agregar</a>
 
-    </tr>
-  </thead>
-  <tbbody>
-    {% if object_list %}
+    {% if object_list%}
+    <table class="table table-border">
+      <thead>
+        <tr>
+          <td>#</td>
+          <td> Nombre </td>
+          <td> Apellido </td>
+          <td> Dirección </td>
+          <td> Documento </td>
+          <td> Telefono </td>
+          <td> Nacionalidad </td>
+          <td> Acciones </td>
+    
+        </tr>
+      </thead>
+      <tbbody>
 
     {% for gestion in object_list %}
     <tr>
@@ -42,7 +42,4 @@
     {% endif %}
   </tbbody>
 </table>
-
-
-
 {% endblock %}
