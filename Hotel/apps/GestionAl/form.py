@@ -1,5 +1,5 @@
 from django import forms
-from apps.GestionAl.models import Alquiler
+from apps.GestionAl.models import Alquiler, Registrador
 
 class AlquilerForm(forms.ModelForm):
   class Meta:
@@ -29,6 +29,39 @@ class AlquilerForm(forms.ModelForm):
             'observacion': forms.Textarea(attrs={'class': 'form-control'}),
             'registrador': forms.Select(attrs={'class': 'form-control'}),
             'estado': forms.Select(attrs={'class': 'form-control'}),
+        }
+
+class RegistradorForm(forms.ModelForm):
+  class Meta:
+    model=Registrador
+
+    fields = [
+
+            'nombre',
+            'direccion',
+            'documento',
+            'telefono',
+            'estado',
+            'observacion',
+
+    ]
+
+    labels = {
+            'nombre': 'nombre',
+            'direccion': 'direccion',
+            'documento': 'documento',
+            'telefono': 'telefono',
+            'estado': 'estado',
+            'observacion': 'observacion',
+        }
+    widgets = {
+            'nombre': forms.TextInput(attrs={'class': 'form-control'}),
+            'direccion': forms.TextInput(attrs={'class': 'form-control'}),
+            'documento': forms.TextInput(attrs={'class': 'form-control'}),
+            'telefono': forms.TextInput(attrs={'class': 'form-control'}),
+            'estado': forms.Select(attrs={'class': 'form-control'}),
+            'observacion': forms.Textarea(attrs={'class': 'form-control'}),
+            
         }
 
     
