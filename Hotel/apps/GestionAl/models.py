@@ -13,7 +13,7 @@ class Registrador(models.Model):
     direccion=models.CharField(max_length=60)
     documento=models.IntegerField()
     telefono=models.IntegerField()
-    estado=models.CharField(max_length=60)
+    estado=models.ForeignKey(Estado, on_delete=models.CASCADE)
     observacion=models.CharField(max_length=90)
 
     def __str__(self):
