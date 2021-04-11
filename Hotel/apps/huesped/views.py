@@ -38,4 +38,14 @@ class NacionalidadCreate(CreateView):
   template_name='nacionalidad/nacionalidad_form.htm'
   success_url= reverse_lazy('huesped_listar')
 
-  
+class NacionalidadUpdate(UpdateView):
+  model=Nacionalidad
+  form_class=NacionalidadForm
+  template_name='nacionalidad/nacionalidad_list.htm'
+  success_url= reverse_lazy('huesped_listar')
+
+class NacionalidadDelete(DeleteView):
+  model=Nacionalidad
+  form_class=NacionalidadForm
+  template_name='nacionalidad/nacionalidad_delete.htm'
+  success_url= reverse_lazy('huesped_listar')  
