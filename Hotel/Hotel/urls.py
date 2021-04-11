@@ -36,5 +36,4 @@ urlpatterns = [
     name='password_reset_complete'),
     url(r'^GestionAl/',include('apps.GestionAl.urls')),
     url(r'^huesped/',include('apps.huesped.urls')),
-
 ]

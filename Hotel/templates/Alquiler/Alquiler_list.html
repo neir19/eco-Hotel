@@ -1,0 +1,38 @@
+{%extends 'base/basehabitacion.html'%}
+{% block content %}
+<a href="{% url 'Alquiler_crear' %}" class="btn btn-primary">Agregar</a>
+  <table class= "table table-bordered">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Fecha de Entrada</td>
+        <td>Fecha de Salida</td>
+        <td>costoTotal</td>
+        <td>observacion</td>
+        <td>registrador</td>
+        <td>estado</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% if object_list %}
+      {% for Alquiler in object_list %}
+        <tr>
+          <td>{{Alquiler.id}}</td>
+          <td>{{Alquiler.fechaHoraEntrada}}</td>
+          <td>{{Alquiler.fechaHoraSalida}}</td>
+          <td>{{Alquiler.costoTotal}}</td>
+          <td>{{Alquiler.observacion}}</td>
+          <td>{{Alquiler.registrador}}</td>
+          <td>{{Alquiler.estado}}</td>
+          <td>
+            <a class="btn btn-primary" href="{% url 'Alquiler_editar' Alquiler.id%}">Editar</a>
+            <a class="btn btn-danger"  href="{% url 'Alquiler_eliminar' Alquiler.id%}">eliminar</a>
+          </td>
+        </tr>
+      {%endfor%}
+      {%else%}
+      <h1>No hay registro de alquileres</h1>
+      {%endif%}
+    </tbody>
+  </table>
+{%endblock%}
