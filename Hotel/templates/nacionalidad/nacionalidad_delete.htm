@@ -5,6 +5,6 @@
     {% csrf_token %}
     <h5>¿Esta seguro de eliminar el país {{object.pais}} con la Nacionalidad {{object.nacionalidad}} de la base de datos?</h5>
     <button class="btn btn-dark" type="submit">Si, eliminar</button>
-    <a class="btn btn-dark" href="{% url 'huesped_listar' %}">Cancelar</a>
+    <a class="btn btn-dark" href="{% url 'nacionalidad_listar' %}">Cancelar</a>
   </form>
 {% endblock %} 

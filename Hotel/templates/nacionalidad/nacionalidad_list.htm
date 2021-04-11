@@ -2,10 +2,13 @@
 
 
 {% block content %}
+<a class="btn btn-primary" href="{% url 'nacionalidad_agregar' %}"><h5>agregar</h5>
+</a>
 
-<table class="table table-border">
+
   
     {% if object_list %}
+    <table class="table table-border">
     <thead>
       <tr>
         <td>#</td>
@@ -34,7 +37,6 @@
   </tbbody>
 </table>
 
-<a class="btn btn-Warning" href="{% url 'nacionalidad_agregar' %}"><h5>Regresar</h5>
-</a>
+
 
 {% endblock %}
