@@ -2,13 +2,13 @@
 
 
 {% block content %}
-<a class="btn btn-primary" href="{% url 'nacionalidad_agregar' %}"><h5>agregar</h5>
+<a class="btn btn-success" href="{% url 'nacionalidad_agregar' %}">Agregar
 </a>
 
 
-  
+
     {% if object_list %}
-    <table class="table table-border">
+    <table class= "table table-bordered">    
     <thead>
       <tr>
         <td>#</td>
@@ -26,8 +26,11 @@
       <td> {{nacionalidad.id_Nacionalidad}} </td>
       <td> {{nacionalidad.pais}} </td>
       <td> {{nacionalidad.nacionalidad}} </td>
-      <td><a class="btn btn-warning" href="{% url 'nacionalidad_delete' nacionalidad.id_Nacionalidad %}">Eliminar</a>
-        <a class="btn btn-info" href="{% url 'nacionalidad_edit' nacionalidad.id_Nacionalidad %}">Editar</a></td>
+      <td>
+        <a class="btn btn-primary" href="{% url 'nacionalidad_edit' nacionalidad.id_Nacionalidad %}">Editar</a>
+        <a class="btn btn-danger" href="{% url 'nacionalidad_delete' nacionalidad.id_Nacionalidad %}">Eliminar</a>
+      </td>
+        
     
     </tr>
     {% endfor %}

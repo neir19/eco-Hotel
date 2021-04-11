@@ -1,6 +1,6 @@
 {%extends 'base/basehabitacion.html'%}
 {% block content %}
-<a href="{% url 'Registrador_crear' %}" class="btn btn-primary">Agregar</a>
+<a href="{% url 'Registrador_crear' %}" class="btn btn-success">Agregar</a>
   
       {% if object_list %}
       <table class= "table table-bordered">
@@ -13,6 +13,8 @@
             <td>Telefono</td>
             <td>Estado</td>
             <td>Observacion</td>
+            <td>Acciones</td>
+
           </tr>
         </thead>
         <tbody>
