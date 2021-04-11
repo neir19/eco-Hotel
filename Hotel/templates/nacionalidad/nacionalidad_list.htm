@@ -4,17 +4,18 @@
 {% block content %}
 
 <table class="table table-border">
-  <thead>
-    <tr>
-      <td>#</td>
-      <td> Pais </td>
-      <td> Nacionalidad </td>
-      <td> Acciones </td>
-
-    </tr>
-  </thead>
-  <tbbody>
+  
     {% if object_list %}
+    <thead>
+      <tr>
+        <td>#</td>
+        <td> Pais </td>
+        <td> Nacionalidad </td>
+        <td> Acciones </td>
+  
+      </tr>
+    </thead>
+    <tbbody>
 
     {% for nacionalidad in object_list %}
     <tr>
