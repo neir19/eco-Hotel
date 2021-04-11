@@ -8,6 +8,7 @@
 {% block navbar %}
 <head>
   <link rel="stylesheet" href="{% static 'CSS/base.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/registrar.css'}">
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,8 +28,8 @@
 <form method='post'>
   {% csrf_token %}
   <div class="col-md-8 col-md-offset-2">
-    <div class="form-group">
-      <label>Nombre de usuario</label>
+    <div class="form-group Labels">
+      <label >Nombre de usuario</label>
       <input class="from-control" type="text" name="username">
     </div>
   </div>

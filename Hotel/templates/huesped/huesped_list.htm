@@ -1,10 +1,10 @@
 {%extends 'base/baseHabitacion.html'%}
 
 {% block content %}
-<a class="btn btn-primary" href="{% url 'huesped_agregar' %}">Agregar</a>
+<a class="btn btn-success" href="{% url 'huesped_agregar' %}">Agregar</a>
 
     {% if object_list%}
-    <table class="table table-border">
+    <table class= "table table-bordered">
       <thead>
         <tr>
           <td>#</td>
@@ -31,7 +31,7 @@
       <td> {{gestion.telefono}} </td>
       <td> {{gestion.nacionalidad}} </td>
       <td>
-        <a class="btn btn-success" href="{% url 'huesped_edit' gestion.id_Cliente %}">Editar</a>
+        <a class="btn btn-primary" href="{% url 'huesped_edit' gestion.id_Cliente %}">Editar</a>
         <a class="btn btn-danger" href="{% url 'huesped_delete' gestion.id_Cliente %}">ELiminar</a> 
       </td>
     

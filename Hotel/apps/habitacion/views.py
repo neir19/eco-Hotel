@@ -51,7 +51,7 @@ class ThabitacionUpdate(UpdateView):
   model= TipoHabitacion
   form_class=ThabitacionForm
   template_name='habitacion/habitacion_form.html'
-  success_url= reverse_lazy('thabitacion_Listar')
+  success_url= reverse_lazy('thabitacion_listar')
 
 class ThabitacionDelete(DeleteView):
   model=TipoHabitacion
