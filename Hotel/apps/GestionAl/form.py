@@ -13,6 +13,8 @@ class AlquilerForm(forms.ModelForm):
             'observacion',
             'registrador',
             'estado',
+            'cliente',
+            'habitacion',
         ]
     labels = {
             'fechaHoraEntrada': 'fechaHoraEntrada',
@@ -21,6 +23,8 @@ class AlquilerForm(forms.ModelForm):
             'observacion': 'observacion',
             'registrador': 'registrador',
             'estado': 'estado',
+            'cliente': 'cliente',
+            'habitacion': 'habitacion',
         }
     widgets = {
             'fechaHoraEntrada': forms.TextInput(attrs={'class': 'form-control'}),
@@ -29,6 +33,8 @@ class AlquilerForm(forms.ModelForm):
             'observacion': forms.Textarea(attrs={'class': 'form-control'}),
             'registrador': forms.Select(attrs={'class': 'form-control'}),
             'estado': forms.Select(attrs={'class': 'form-control'}),
+            'cliente': forms.Select(attrs={'class': 'form-control'}),
+            'habitacion': forms.Select(attrs={'class': 'form-control'}),
         }
 
 class RegistradorForm(forms.ModelForm):
@@ -43,6 +49,7 @@ class RegistradorForm(forms.ModelForm):
             'telefono',
             'estado',
             'observacion',
+            
 
     ]
 

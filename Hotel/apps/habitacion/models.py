@@ -18,4 +18,8 @@ class Habitacion(models.Model):
   descripcion=models.TextField()
   fkTipo= models.ForeignKey(TipoHabitacion,null=True, blank=True, on_delete=models.CASCADE) 
 
+  def __str__(self):
+    return '{}'.format(self.numero)
+
+
   

@@ -13,46 +13,46 @@ def index(request):
 
 class AlquilerList(ListView):
     model=Alquiler
-    template_name='Alquiler/Alquiler_list.html'
+    template_name='alquiler/alquiler_list.html'
 
 class AlquilerCreate(CreateView):
     model=Alquiler
     form_class = AlquilerForm
-    template_name='Alquiler/Alquiler_form.html'
+    template_name='alquiler/alquiler_form.html'
     success_url = reverse_lazy('Alquiler_listar')
 
 class AlquilerUpdate(UpdateView):
     model=Alquiler
     form_class = AlquilerForm
-    template_name='Alquiler/Alquiler_form.html'
+    template_name='alquiler/alquiler_form.html'
     success_url = reverse_lazy('Alquiler_listar')
 
 class AlquilerDelete(DeleteView):
     model=Alquiler
-    template_name='Alquiler/Alquiler_delete.html'
+    template_name='alquiler/alquiler_delete.html'
     success_url = reverse_lazy('Alquiler_listar')
 
 #REGISTRADOR
 
 class RegistradorList(ListView):
     model=Registrador
-    template_name='Alquiler/Registrador_list.html'
+    template_name='alquiler/registrador_list.html'
 
 class RegistradorCreate(CreateView):
     model=Registrador
     form_class = RegistradorForm
-    template_name='Alquiler/Alquiler_form.html'
+    template_name='alquiler/alquiler_form.html'
     success_url = reverse_lazy('Registrador_listar')
 
 class RegistradorUpdate(UpdateView):
     model=Registrador
     form_class = RegistradorForm
-    template_name='Alquiler/Alquiler_form.html'
+    template_name='alquiler/alquiler_form.html'
     success_url = reverse_lazy('Registrador_listar')
 
 class RegistradorDelete(DeleteView):
     model=Registrador
-    template_name='Alquiler/Registrador_delete.html'
+    template_name='alquiler/registrador_delete.html'
     success_url = reverse_lazy('Registrador_listar')
 
 

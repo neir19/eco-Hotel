@@ -13,6 +13,8 @@
             <td>observacion</td>
             <td>registrador</td>
             <td>estado</td>
+            <td>cliente</td>
+            <td>habitacion</td>
             <td>acciones</td>
           </tr>
         </thead>
@@ -26,6 +28,8 @@
           <td>{{Alquiler.observacion}}</td>
           <td>{{Alquiler.registrador}}</td>
           <td>{{Alquiler.estado}}</td>
+          <td>{{Alquiler.cliente}}</td>
+          <td>{{Alquiler.habitacion}}</td>
           <td>
             <a class="btn btn-primary" href="{% url 'Alquiler_editar' Alquiler.id%}">Editar</a>
             <a class="btn btn-danger"  href="{% url 'Alquiler_eliminar' Alquiler.id%}">eliminar</a>
